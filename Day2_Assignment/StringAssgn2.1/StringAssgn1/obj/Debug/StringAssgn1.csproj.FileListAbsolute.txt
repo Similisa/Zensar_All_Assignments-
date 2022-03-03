@@ -1,0 +1,7 @@
+D:\Zensar\Day2Assignment\StringAssgn1\StringAssgn1\bin\Debug\StringAssgn1.exe.config
+D:\Zensar\Day2Assignment\StringAssgn1\StringAssgn1\bin\Debug\StringAssgn1.exe
+D:\Zensar\Day2Assignment\StringAssgn1\StringAssgn1\bin\Debug\StringAssgn1.pdb
+D:\Zensar\Day2Assignment\StringAssgn1\StringAssgn1\obj\Debug\StringAssgn1.csprojAssemblyReference.cache
+D:\Zensar\Day2Assignment\StringAssgn1\StringAssgn1\obj\Debug\StringAssgn1.csproj.CoreCompileInputs.cache
+D:\Zensar\Day2Assignment\StringAssgn1\StringAssgn1\obj\Debug\StringAssgn1.exe
+D:\Zensar\Day2Assignment\StringAssgn1\StringAssgn1\obj\Debug\StringAssgn1.pdb

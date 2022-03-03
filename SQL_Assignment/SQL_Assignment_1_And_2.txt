@@ -1,0 +1,215 @@
+create database Company;
+
+create Table EMP
+(empno int primary key,
+ename varchar(255) not null,
+JOB varchar (255),
+MGR int,
+HIREDATE DATE,
+sal float,
+COMM int null,
+DEPTNO int )
+
+Alter table EMP add foreign key (DEPTNO) references Dept(DEPTNO)
+
+create Table Dept
+(DEPTNO int primary key,
+DNAME varchar(255),
+LOC varchar(255))
+
+select*from EMP
+Insert into EMP(empno,ename,
+       JOB,MGR,HIREDATE,sal,
+        DEPTNO) 
+ values(7369,'SMITH','CLERK',7902,'17-DEC-80' ,800,20)
+
+ Insert into EMP(empno,ename,
+       JOB,MGR,HIREDATE,sal,
+       COMM,DEPTNO)
+values(7499,'ALLEN','SALESMAN',7698,'20-FEB-81',1600,300,30)
+
+Insert into EMP(empno,ename,
+       JOB,MGR,HIREDATE,sal,
+       COMM,DEPTNO)
+values (7521,'WARD','SALESMAN',7698,'22-FEB-81',1250,500,30)
+       
+Insert into EMP(empno,ename,
+       JOB,MGR,HIREDATE,sal,
+        DEPTNO) 
+ values(7566,'JONES','MANAGER',7839,'02-APR-81',2975,20)
+
+ Insert into EMP(empno,ename,
+       JOB,MGR,HIREDATE,sal,
+       COMM,DEPTNO)
+values(7654,'MARTIN','SALESMAN',7698,'28-SEP-81',1250,1400,30)
+
+Insert into EMP(empno,ename,
+       JOB,MGR,HIREDATE,sal,
+        DEPTNO) 
+ values(7698,'BLAKE','MANAGER',7839,'01-MAY-81',2850,30)
+
+ Insert into EMP(empno,ename,
+       JOB,MGR,HIREDATE,sal,
+        DEPTNO) 
+ values(7782,'CLARK','MANAGER',7839,'09-JUN-81',2450,10)
+
+  Insert into EMP(empno,ename,
+       JOB,MGR,HIREDATE,sal,
+        DEPTNO) 
+ values(7788,'SCOTT','ANALYST',7566,'19-APR-87',3000,20)
+         
+ Insert into EMP(empno,ename,
+       JOB,HIREDATE,sal,
+        DEPTNO) 
+ values(7839,'KING','PRESIDENT','17-NOV-81',5000,10)
+
+  Insert into EMP(empno,ename,
+       JOB,MGR,HIREDATE,sal,
+       COMM,DEPTNO)
+values(7844,'TURNER','SALESMAN',7698,'08-SEP-81',1500,0,30)
+
+  Insert into EMP(empno,ename,
+       JOB,MGR,HIREDATE,sal,
+        DEPTNO) 
+ values(7876,'ADAMS','CLERK',7788,'23-MAY-87',1100,20),
+(7900,'JAMES','CLERK',7698,'03-DEC-81',950,30),
+(7902,'FORD','ANALYST',7566,'03-DEC-81',3000,20),
+(7934,'MILLER','CLERK',7782,'23-JAN-82',1300,10)
+
+select*from Dept
+Insert into Dept(DEPTNO,DNAME,LOC)
+values(10,'ACCOUNTING','NEW YORK'),
+      (20,'RESEARCH','DALLAS'),
+      (30,'SALES','CHICAGO'),
+      (40,'OPERATIONS','BOSTON') 
+
+
+	 /* 1. List all employees whose name begins with 'A'*/
+
+        select * from EMP where ename LIKE 'A%';
+
+	/* 2. Select all those employees who don't have a manager. */
+
+	     select* from EMP where MGR is Null;
+
+       /*3. List employee name, number and salary for those employees who earn in the range 1200 to 1400.*/
+
+       select EMP.ename,EMP.empno,EMP.sal from EMP where sal  between 1200 and 1400;
+
+       /*4. Give all the employees in the RESEARCH department a 10% pay rise. 
+       Verify that this has been done by listing all their details before and after the rise. */
+
+       update EMP set sal=case DEPTNO when 20 then sal+(sal*.10) else sal end where DEPTNO IN(10,20,30,40);
+
+      /*5. Find the number of CLERKS employed. Give it a descriptive heading. */
+
+       select count(*) as Total_no_of_Clerk from EMP where JOB='CLERK' 
+
+      /* 6. Find the average salary for each job type and the number of people employed in each job. */
+
+	   select count(*) as NO_OF_PEOPLE, avg(sal) as AVG_SAL ,JOB from emp group by DEPTNO, JOB
+
+     /*  7. List the employees with the lowest and highest salary. */
+
+           select ename, max(sal) as High_Sal, min(sal) as Min_SAL from EMP 
+
+     /*   8. List full details of departments that don't have any employees. */
+
+           select * from Dept where DEPTNO Not in(select DEPTNO from EMP)
+
+     /*  9. Get the names and salaries of all the analysts earning more than 1200 who are based in department 20. 
+	  Sort the answer by ascending order of name. */
+
+	  select ename,sal from EMP where JOB='Analyst' and sal>1200 order by DEPTNO asc
+
+     /* 10. For each department, list its name and number together with the total salary paid to employees in that department. */
+
+	       select DEPTNO as Department, count(*) as No_of_Employee,sum(sal) as Total_Sal from EMP Group by DEPTNO
+
+    /*  11. Find out salary of both MILLER and SMITH.*/
+	
+          select SAL from EMP where ename='MILLER' or ename='SMITH'
+
+    /*  12. Find out the names of the employees whose name begin with ‘A’ or ‘M’. */
+
+	     select * from EMP where ename LIKE '[A M]%'
+
+    /*  13. Compute yearly salary of SMITH. */
+
+	      select ename ,(sal*12) as Yearly_Salary from EMP where ename='SMITH' 
+
+     /* 14. List the name and salary for all employees whose salary is not in the range of 1500 and 2850. */
+
+	     select ename ,sal from emp where sal not between 1500 and 2850
+
+
+      /*------------------------------------Assignment-2---------------------------------------*/
+
+
+      /*Note: Consider the EMP and DEPT tables for the following queries. */
+
+   /*1. Retrieve a list of MANAGERS. */
+
+    select * from EMP where JOB='Manager'
+
+   /*2. Find out salary of both MILLER and SMITH. */
+
+     select SAL from EMP where ename='MILLER' or ename='SMITH'
+
+   /*3. Find out the names and salaries of all employees earning more than 1000 per 
+        month. */
+
+     select ename,sal from EMP where sal>1000
+
+  /*4. Display the names and salaries of all employees except JAMES. */
+
+     select ename ,sal from EMP where ename!='james'
+
+ /*5. Find out the details of employees whose names begin with ‘S’. */
+
+      select *from EMP where ename Like 's%'
+
+ /*6. Find out the names of all employees that have ‘A’ anywhere in their name. */
+
+      select *from EMP where ename Like '%A%'
+
+ /*7. Find out the names of all employees that have ‘L’ as their third character in 
+      their name. */
+
+     select *from EMP where ename Like '__L%'
+
+/*8. Find out the names of the employees whose name begin with ‘A’ or ‘M’. */
+
+    select * from EMP where ename like '[A M]%'
+
+/*9. Compute yearly salary of SMITH. */
+
+     select ENAME ,(sal*12) as Yearly_Salary from EMP where ename='SMITH' 
+
+/*10. Compute daily salary of JONES.*/ 
+
+select ENAME,SAL,(SAL/30)'Daily Salary' from EMP where ENAME = 'Jones'
+
+/*11. Calculate the total monthly salary of all employees. */
+
+  select sum(SAL)'Total Monthly Salary of All Employee' from EMP
+
+/*12. Print the average annual salary. */
+
+  select  avg(SAL*12) 'Average Annual Salary' from EMP
+
+/*13. Select the name, job, salary, department number of all employees except 
+SALESMAN from department number 30. */
+
+   select ENAME,JOB,SAL,DEPTNO from EMP where JOB <> 'SALESMAN' and DEPTNO = 30      
+
+/*14. List unique departments of the EMP table. */
+
+      select distinct(DEPTNO) 'Unique Department ID in Employee Table.' from EMP
+
+/*15. List the name and salary of employees who earn more than 1500 and are in department 10 or 30. 
+Label the columns Employee and Monthly Salary respectively.*/
+
+	select Ename as 'Employee', Sal  as 'Monthly Salary',DEPTNO from EMP
+        where SAL > 1500 and (DEPTNO = 10 or DEPTNO = 30)
+	

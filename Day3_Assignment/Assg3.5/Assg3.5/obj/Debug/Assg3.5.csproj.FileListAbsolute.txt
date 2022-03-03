@@ -1,0 +1,7 @@
+C:\Users\SL65770\source\repos\Assg3.5\Assg3.5\bin\Debug\Assg3.5.exe.config
+C:\Users\SL65770\source\repos\Assg3.5\Assg3.5\bin\Debug\Assg3.5.exe
+C:\Users\SL65770\source\repos\Assg3.5\Assg3.5\bin\Debug\Assg3.5.pdb
+C:\Users\SL65770\source\repos\Assg3.5\Assg3.5\obj\Debug\Assg3.5.csprojAssemblyReference.cache
+C:\Users\SL65770\source\repos\Assg3.5\Assg3.5\obj\Debug\Assg3.5.csproj.CoreCompileInputs.cache
+C:\Users\SL65770\source\repos\Assg3.5\Assg3.5\obj\Debug\Assg3.5.exe
+C:\Users\SL65770\source\repos\Assg3.5\Assg3.5\obj\Debug\Assg3.5.pdb

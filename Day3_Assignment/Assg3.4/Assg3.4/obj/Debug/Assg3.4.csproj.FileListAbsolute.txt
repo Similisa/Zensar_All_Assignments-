@@ -1,0 +1,7 @@
+C:\Users\SL65770\source\repos\Assg3.4\Assg3.4\bin\Debug\Assg3.4.exe.config
+C:\Users\SL65770\source\repos\Assg3.4\Assg3.4\bin\Debug\Assg3.4.exe
+C:\Users\SL65770\source\repos\Assg3.4\Assg3.4\bin\Debug\Assg3.4.pdb
+C:\Users\SL65770\source\repos\Assg3.4\Assg3.4\obj\Debug\Assg3.4.csprojAssemblyReference.cache
+C:\Users\SL65770\source\repos\Assg3.4\Assg3.4\obj\Debug\Assg3.4.csproj.CoreCompileInputs.cache
+C:\Users\SL65770\source\repos\Assg3.4\Assg3.4\obj\Debug\Assg3.4.exe
+C:\Users\SL65770\source\repos\Assg3.4\Assg3.4\obj\Debug\Assg3.4.pdb

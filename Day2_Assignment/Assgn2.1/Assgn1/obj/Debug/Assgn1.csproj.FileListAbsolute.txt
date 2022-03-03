@@ -1,0 +1,14 @@
+D:\Zensar\Day2Assignment\Assgn1\Assgn1\obj\Debug\Assgn1.csprojAssemblyReference.cache
+D:\Zensar\Day2Assignment\Assgn1\Assgn1\obj\Debug\Assgn1.csproj.CoreCompileInputs.cache
+D:\Zensar\Day2Assignment\Assgn1\Assgn1\bin\Debug\Assgn1.exe.config
+D:\Zensar\Day2Assignment\Assgn1\Assgn1\bin\Debug\Assgn1.exe
+D:\Zensar\Day2Assignment\Assgn1\Assgn1\bin\Debug\Assgn1.pdb
+D:\Zensar\Day2Assignment\Assgn1\Assgn1\obj\Debug\Assgn1.exe
+D:\Zensar\Day2Assignment\Assgn1\Assgn1\obj\Debug\Assgn1.pdb
+D:\Zensar\Day2Assignment\Assgn2.1\Assgn1\bin\Debug\Assgn1.exe.config
+D:\Zensar\Day2Assignment\Assgn2.1\Assgn1\bin\Debug\Assgn1.exe
+D:\Zensar\Day2Assignment\Assgn2.1\Assgn1\bin\Debug\Assgn1.pdb
+D:\Zensar\Day2Assignment\Assgn2.1\Assgn1\obj\Debug\Assgn1.csprojAssemblyReference.cache
+D:\Zensar\Day2Assignment\Assgn2.1\Assgn1\obj\Debug\Assgn1.csproj.CoreCompileInputs.cache
+D:\Zensar\Day2Assignment\Assgn2.1\Assgn1\obj\Debug\Assgn1.exe
+D:\Zensar\Day2Assignment\Assgn2.1\Assgn1\obj\Debug\Assgn1.pdb

@@ -1,0 +1,6 @@
+D:\Zensar\Day1Assignment\Assg5\Assg5\bin\Debug\Assg5.exe.config
+D:\Zensar\Day1Assignment\Assg5\Assg5\bin\Debug\Assg5.exe
+D:\Zensar\Day1Assignment\Assg5\Assg5\bin\Debug\Assg5.pdb
+D:\Zensar\Day1Assignment\Assg5\Assg5\obj\Debug\Assg5.csproj.CoreCompileInputs.cache
+D:\Zensar\Day1Assignment\Assg5\Assg5\obj\Debug\Assg5.exe
+D:\Zensar\Day1Assignment\Assg5\Assg5\obj\Debug\Assg5.pdb

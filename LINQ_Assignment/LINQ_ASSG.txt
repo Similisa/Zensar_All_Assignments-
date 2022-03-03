@@ -1,0 +1,201 @@
+using Microsoft.OData.Edm;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace linqasm
+{
+    class Employee
+    {
+        public int EmplyeeID;
+        public string FirstName;
+        public string LastName;
+        public string Title;
+        public Date DOB;
+        public Date DOJ;
+        public string City;
+    }
+    class LinqtoObjects
+    {
+        static void Main()
+        {
+
+            List<Employee> emplist = new List<Employee>()
+            {
+
+                new Employee(){EmplyeeID=1001,FirstName="Malcolm",LastName= "Daruwalla" , Title= "Manager ", DOB = Date.Parse( "16/11/1984"), DOJ =Date.Parse( " 8/ 6/2011"), City = "Mumbai"},
+                new Employee(){EmplyeeID=1002,FirstName="Asdin ",LastName= "Dhalla " , Title= "AsstManager",  DOB = Date.Parse( "20/08/1984"), DOJ =Date.Parse( " 7/ 7/2012"), City = "Mumbai"},
+                new Employee(){EmplyeeID=1003,FirstName="Madhavi",LastName= "Oza " , Title= "Consultant ", DOB = Date.Parse( "14/11/1987"), DOJ =Date.Parse( "12/ 4/2015"), City = "Pune"},
+                new Employee(){EmplyeeID=1004,FirstName="Saba ",LastName= "Shaikh " , Title= "SE ", DOB = Date.Parse( " 3/ 6/1990"), DOJ =Date.Parse( " 2/ 2/2016"), City = "Pune"},
+                new Employee(){EmplyeeID=1005,FirstName="Nazia ",LastName= "Shaikh " , Title= "SE ", DOB = Date.Parse( " 8/ 3/1991"), DOJ =Date.Parse( " 2/ 2/2016"), City = "Mumbai"},
+                new Employee(){EmplyeeID=1006,FirstName="Amit ",LastName= "Pathak " , Title= "Consultant ", DOB = Date.Parse( " 7/11/1989"), DOJ =Date.Parse( " 8/ 8/2014"), City = "Chennai"},
+                new Employee(){EmplyeeID=1007,FirstName="Vijay ",LastName= "Natrajan " , Title= "Consultant ", DOB = Date.Parse( " 2/12/1989"), DOJ =Date.Parse( " 1/ 6/2015"), City = "Mumbai"},
+                new Employee(){EmplyeeID=1008,FirstName="Rahul ",LastName= "Dubey " , Title= "Associate ", DOB = Date.Parse( "11/11/1993"), DOJ =Date.Parse( " 6/11/2014"), City = "Chennai"},
+                new Employee(){EmplyeeID=1009,FirstName="Suresh ",LastName= "Mistry " , Title= "Associate ", DOB = Date.Parse( "12/ 8/1992"), DOJ =Date.Parse( " 3/12/2014"), City = "Chennai"},
+                new Employee(){EmplyeeID=1010,FirstName="Sumit ",LastName= "Shah " , Title= "Manager ",  DOB = Date.Parse( "12/ 4/1991"), DOJ =Date.Parse( " 2/ 1/2016"), City = "Pune"},
+            };
+
+            Console.WriteLine("");
+            Console.WriteLine("1. Display detail of all the employee");
+
+
+            foreach (var i in emplist)
+            {
+                Console.WriteLine($"{i.EmplyeeID} {i.FirstName} {i.LastName} {i.Title} {i.DOB} {i.DOJ} {i.City}");
+
+            }
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("2. the employee whose location is not Mumbai: ");
+            Console.WriteLine("");
+
+
+            var ci = emplist.Where(c => c.City == "Mumbai").ToList<Employee>();
+            foreach (var i in ci)
+            {
+
+                Console.WriteLine($"{i.EmplyeeID} {i.FirstName} {i.LastName} {i.Title} {i.DOB} {i.DOJ} {i.City}");
+            }
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("3.the employee whose title is AsstManager: ");
+            var ti = emplist.Where(t => t.Title == "AsstManager").ToList<Employee>();
+            foreach (var i in ti)
+            {
+                Console.WriteLine($"{i.EmplyeeID} {i.FirstName} {i.LastName} {i.Title} {i.DOB} {i.DOJ} {i.City}");
+
+
+            }
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("4.the employee whose Last Name start with S:");
+            var ln = from s in emplist
+                     where s.LastName.StartsWith("S")
+                     select s.LastName;
+            foreach (var s in ln)
+            {
+                Console.WriteLine(s);
+
+
+            }
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("5.the employee who have joined before 1/1/2015 :");
+            var dj = emplist.Where(d => d.DOJ < Date.Parse(" 1/ 1/2015")).ToList<Employee>();
+
+
+            foreach (var i in dj)
+            {
+                Console.WriteLine($"{i.EmplyeeID} {i.FirstName} {i.LastName} {i.Title} {i.DOB} {i.DOJ} {i.City}");
+
+
+            }
+
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("6.the employee whose date of birth is after 1/1/1990 :");
+            var db = emplist.Where(d => d.DOB < Date.Parse(" 1/1/1990")).ToList<Employee>();
+
+
+
+            foreach (var i in db)
+            {
+                Console.WriteLine($"{i.EmplyeeID} {i.FirstName} {i.LastName} {i.Title} {i.DOB} {i.DOJ} {i.City}");
+
+
+            }
+
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("7.the employee whose designation is Consultant and Associate :");
+            var de = emplist.Where(d => d.Title == "Consultant " || d.Title == "Associate ").ToList<Employee>();
+
+
+
+            foreach (var i in de)
+            {
+                Console.WriteLine($"{i.EmplyeeID} {i.FirstName} {i.LastName} {i.Title} {i.DOB} {i.DOJ} {i.City}");
+
+
+            }
+
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("8.Display total number of employees :");
+            var to = emplist.Count();
+            Console.WriteLine(to);
+
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.Write("9. Display total number of employees belonging to “Chennai” : ");
+            var tot = emplist.Where(d => d.City == "Chennai").Count<Employee>();
+            Console.WriteLine(tot);
+
+
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("10. Display highest employee id from the list :");
+            var res1 = emplist.Max(a => a.EmplyeeID);
+            Console.WriteLine("Max salary: {0}", res1);
+
+
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.Write("11. Display total number of employee who have joined after 1/1/2015 : ");
+            var dooj = emplist.Where(d => d.DOJ > Date.Parse(" 1/ 1/2015")).Count<Employee>();
+            Console.WriteLine(dooj);
+
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.Write("12. Display total number of employee whose designation is not “Associate” :");
+            var tit = emplist.Where(d => d.Title == "Associate ").Count<Employee>();
+            Console.WriteLine(tit);
+
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("13. Display total number of employee based on City: ");
+            var tote = emplist.Where(d => d.City == "Chennai").Count<Employee>();
+            Console.WriteLine("Chennai: " + tote);
+            var tota = emplist.Where(d => d.City == "Mumbai").Count<Employee>();
+            Console.WriteLine("Mumbai: " + tota);
+            var total = emplist.Where(d => d.City == "Pune").Count<Employee>();
+            Console.WriteLine("Pune: " + total);
+
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("14. Display total number of employee based on city and title : ");
+            //var t1 = emplist.Where(d => d.City == "Chennai" && d.Title.).Count<Employee>();
+            Console.WriteLine("Chennai: " + tote);
+            var t2 = emplist.Where(d => d.City == "Mumbai").Count<Employee>();
+            Console.WriteLine("Mumbai: " + tota);
+            var t3 = emplist.Where(d => d.City == "Pune").Count<Employee>();
+            Console.WriteLine("Pune: " + total);
+
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("15. Display total number of employee who is youngest in the list :");
+            var d1 = from s in emplist
+                     orderby s.DOB descending
+                     select s;
+
+            Console.WriteLine();
+
+            Console.ReadKey();
+
+
+        }
+    }
+
+}

@@ -1,0 +1,7 @@
+D:\Zensar\Day1Assignment\Assg2\Assg2\bin\Debug\Assg2.exe.config
+D:\Zensar\Day1Assignment\Assg2\Assg2\bin\Debug\Assg2.exe
+D:\Zensar\Day1Assignment\Assg2\Assg2\bin\Debug\Assg2.pdb
+D:\Zensar\Day1Assignment\Assg2\Assg2\obj\Debug\Assg2.csprojAssemblyReference.cache
+D:\Zensar\Day1Assignment\Assg2\Assg2\obj\Debug\Assg2.csproj.CoreCompileInputs.cache
+D:\Zensar\Day1Assignment\Assg2\Assg2\obj\Debug\Assg2.exe
+D:\Zensar\Day1Assignment\Assg2\Assg2\obj\Debug\Assg2.pdb
