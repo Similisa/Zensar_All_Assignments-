@@ -1,0 +1,7 @@
+C:\Users\SL65770\source\repos\Student_Mgnt_Sys\Student_Mgnt_Sys\obj\Debug\Student_Mgnt_Sys.csproj.AssemblyReference.cache
+C:\Users\SL65770\source\repos\Student_Mgnt_Sys\Student_Mgnt_Sys\obj\Debug\Student_Mgnt_Sys.csproj.CoreCompileInputs.cache
+C:\Users\SL65770\source\repos\Student_Mgnt_Sys\Student_Mgnt_Sys\bin\Debug\Student_Mgnt_Sys.exe.config
+C:\Users\SL65770\source\repos\Student_Mgnt_Sys\Student_Mgnt_Sys\bin\Debug\Student_Mgnt_Sys.exe
+C:\Users\SL65770\source\repos\Student_Mgnt_Sys\Student_Mgnt_Sys\bin\Debug\Student_Mgnt_Sys.pdb
+C:\Users\SL65770\source\repos\Student_Mgnt_Sys\Student_Mgnt_Sys\obj\Debug\Student_Mgnt_Sys.exe
+C:\Users\SL65770\source\repos\Student_Mgnt_Sys\Student_Mgnt_Sys\obj\Debug\Student_Mgnt_Sys.pdb
