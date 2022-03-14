@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MVC_Assignment2_Movie.Movietable>
+
+@{
+    ViewBag.Title = "MovieScaffolded";
+}
+
+<h2>MovieScaffolded</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.movieid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.moviename)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateofRelease)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.movieid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.moviename)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateofRelease)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.movieid }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.movieid  }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.movieid  })
+        </td>
+    </tr>
+}
+
+</table>
