@@ -80,3 +80,4 @@ D:\Zensar_All_Assignment\MVC_Assignments\MVC_Assignment2_Movie\MVC_Assignment2_M
 D:\Zensar_All_Assignment\MVC_Assignments\MVC_Assignment2_Movie\MVC_Assignment2_Movie\obj\Debug\MVC_Assignment2_Movie.csproj.CopyComplete
 D:\Zensar_All_Assignment\MVC_Assignments\MVC_Assignment2_Movie\MVC_Assignment2_Movie\obj\Debug\MVC_Assignment2_Movie.dll
 D:\Zensar_All_Assignment\MVC_Assignments\MVC_Assignment2_Movie\MVC_Assignment2_Movie\obj\Debug\MVC_Assignment2_Movie.pdb
+D:\Zensar_All_Assignment\MVC_Assignments\MVC_Assignment2_Movie\MVC_Assignment2_Movie\obj\Debug\MVC_Assignment2_Movie.csproj.AssemblyReference.cache

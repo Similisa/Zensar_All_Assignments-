@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using MVC_Assignment2_Movie.Models;
 
 
+
 namespace MVC_Assignment2_Movie.Controllers
 {
 
@@ -77,11 +78,11 @@ namespace MVC_Assignment2_Movie.Controllers
 
         //Display the movie released in any given year 
 
-        public ActionResult GetMoviesByYear(string search)
+        public ActionResult GetMoviesByYear()
         {
-            List<Movietable>movies=(from mtb in db.Movietables
-                                    where mtb.dateofRelease.ToString().Contains(search)||search==null
-                                    select mtb).ToList();
+            List<string>movies=(from mtb in db.Movietables
+                                    where mtb.dateofRelease=="22/10/2018"
+                                    select mtb.moviename).ToList();
             return View(movies);
         }
 

@@ -1,0 +1,47 @@
+﻿@model  IEnumerable<MVC_Assg_CodeFirst.Models.Student>
+@{
+    ViewBag.Title = "Search_View_By_StudentDetails";
+}
+
+<h2>SearchBYStudentDetails</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Student Name
+        </th>
+        <th>
+            City
+        </th>
+        <th>
+            Branch
+        </th>
+        <th>
+            Percentage
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>       
+            <td>
+                item.StudentId
+            </td>
+            <td>
+                @item.City
+            </td>
+            <td>
+                @item.Branch
+            </td>
+            <td>
+                @item.Percentage
+            </td>
+
+        </tr>
+    }
+</table>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
