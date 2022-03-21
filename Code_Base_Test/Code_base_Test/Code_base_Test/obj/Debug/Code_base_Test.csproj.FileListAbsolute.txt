@@ -1,0 +1,7 @@
+D:\Zensar\Code_Base_Test\Code_base_Test\Code_base_Test\bin\Debug\Code_base_Test.exe.config
+D:\Zensar\Code_Base_Test\Code_base_Test\Code_base_Test\bin\Debug\Code_base_Test.exe
+D:\Zensar\Code_Base_Test\Code_base_Test\Code_base_Test\bin\Debug\Code_base_Test.pdb
+D:\Zensar\Code_Base_Test\Code_base_Test\Code_base_Test\obj\Debug\Code_base_Test.csproj.AssemblyReference.cache
+D:\Zensar\Code_Base_Test\Code_base_Test\Code_base_Test\obj\Debug\Code_base_Test.csproj.CoreCompileInputs.cache
+D:\Zensar\Code_Base_Test\Code_base_Test\Code_base_Test\obj\Debug\Code_base_Test.exe
+D:\Zensar\Code_Base_Test\Code_base_Test\Code_base_Test\obj\Debug\Code_base_Test.pdb
