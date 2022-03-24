@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="zensarDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="fn_getEmployee_Result">
+    <Property Name="Empid" Type="Int32" Nullable="false" />
+    <Property Name="Empname" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Salary" Type="Double" />
+    <Property Name="dept" Type="Int32" />
+  </ComplexType>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="AccountNumber" />
+    </Key>
+    <Property Name="AccountNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Balance" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DeptId" />
+    </Key>
+    <Property Name="DeptId" Type="Int32" Nullable="false" />
+    <Property Name="DeptName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Budget" Type="Double" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK__Employee__Dept__2B3F6F97" FromRole="Department" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmpId" />
+    </Key>
+    <Property Name="EmpId" Type="Int32" Nullable="false" />
+    <Property Name="EmpName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="salary" Type="Double" />
+    <Property Name="Dept" Type="Int32" />
+    <NavigationProperty Name="Department" Relationship="Self.FK__Employee__Dept__2B3F6F97" FromRole="Employee" ToRole="Department" />
+  </EntityType>
+  <Association Name="FK__Employee__Dept__2B3F6F97">
+    <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DeptId" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="Dept" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="zensarDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="Departments" EntityType="Self.Department" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <AssociationSet Name="FK__Employee__Dept__2B3F6F97" Association="Self.FK__Employee__Dept__2B3F6F97">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <FunctionImport Name="fn_getEmployee" IsComposable="true" ReturnType="Collection(zensarDBModel.fn_getEmployee_Result)">
+      <Parameter Name="ename" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getEmpsalary" ReturnType="Collection(zensarDBModel.getEmpsalary_Result)">
+      <Parameter Name="eid" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="getEmpsalary_Result">
+    <Property Type="String" Name="EmpName" Nullable="true" MaxLength="40" />
+    <Property Type="Double" Name="Salary" Nullable="true" />
+  </ComplexType>
+</Schema>
